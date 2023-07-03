@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://score.beginners.seccon.jp/
-HostUrl=https://secconctf-quals.s3.isk01.sakurastorage.jp/beginners23/Poker.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=MPNC3IFVHT7F7LF0M4HH%2F20230604%2Fjp-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230604T140700Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3a8006939c2710ac113785b9de352caacaa4ff3696df0b706e4e484d1c2d92f1
