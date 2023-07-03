@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://score.beginners.seccon.jp/
-HostUrl=https://secconctf-quals.s3.isk01.sakurastorage.jp/beginners23/rewriter2.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=MPNC3IFVHT7F7LF0M4HH%2F20230605%2Fjp-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230605T034823Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0da1f6e93960ef14958505bdfc811357e1fef46c25b7eb983f16c61a4915052c
