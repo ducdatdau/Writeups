@@ -1,4 +1,2 @@
 # CTF
-These are CTF challenges I solved.
-
-CTF chưa bao giờ khiến tôi mệt mỏi @georgedo
+**CTF chưa bao giờ khiến tôi mệt mỏi** [@georgedo_twit](https://twitter.com/georgedo_twit)
