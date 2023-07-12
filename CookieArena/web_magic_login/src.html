@@ -1,0 +1,28 @@
+
+<html>
+<form action="verify.php" method="post"> 
+    User Name:<br> 
+    <input type="text" name="username"><br><br> 
+    Password:<br> 
+    <input type="password" name="password"><br><br> 
+    <input type="submit" name="submit" value="Login"> 
+</form>
+<!--
+if(isset($_POST['submit'])){ 
+    $usr = mysql_real_escape_string($_POST['username']); 
+    $pas = hash('sha256', mysql_real_escape_string($_POST['password'])); 
+    
+    if($pas == "0"){ 
+        $_SESSION['logged'] = TRUE; 
+        header("Location: upload.php"); // Modify to go to the page you would like 
+        exit; 
+    }else{ 
+        header("Location: login_page.php"); 
+        exit; 
+    } 
+}else{    //If the form button wasn't submitted go to the index page, or login page 
+    header("Location: login_page.php");     
+    exit; 
+} 
+--> 
+</html>
