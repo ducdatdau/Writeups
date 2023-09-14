@@ -1,13 +1,13 @@
 ![shell_basic dreamhack](image.png)
 
-# 0x0 Tổng quan 
+# 0x00 Tổng quan 
 - Files được cho: `shell_basic`, `shell_basic.c`
 - Không như các bài toán khác, đối với bài này, chúng ta cần phải viết shellcode để đọc flag tại `/home/shell_basic/flag_name_is_loooooong`
 
-# 0x1 Shellcode? 
+# 0x01 Shellcode? 
 Shellcode là đoạn mã assembly, được chèn vào payload để thực hiện các mục đích khác nhau như lấy shell, đọc nội dung file, ... Với bài toán ở trên, mục đích chính của shellcode là đọc nội dung của file. Với loại shellcode này, mình sẽ gọi tắt là **orw shellcode (open-read-write shellcode)**.
 
-Để viết được **orw shellcode**, chúng ta cần sử dụng các `syscall` của hệ thống. Dưới đây là các nội dung của các `syscall` cần thiết. 
+Để viết được **orw shellcode**, chúng ta cần sử dụng các syscall của hệ thống. Dưới đây là các nội dung của các syscall cần thiết. 
 
 | syscall   | rax       | arg0(rdi)     | arg1 (rsi)    | arg2 (rdx)    | 
 | --------- | ------    |-----------    | -----------   | -----------   | 
@@ -24,9 +24,9 @@ Giả sử, đường dẫn của file cần đọc là `tmp/flag`. 3 tham số 
     - "/tmp/fla" = 0x616c662f706d742f
     - "g" = 0x67
 - arg1: File access mode 
-    - O_RDONLY (Open read-only) -> flag = 0  
-    - O_WRONLY (Open write-only) -> flag = 1
-    - O_RDWR (Open read/write) -> flag = 2
+    - O_RDONLY (Open read-only) -> `flag = 0`
+    - O_WRONLY (Open write-only) -> `flag = 1`
+    - O_RDWR (Open read/write) -> `flag = 2`
 - arg2: Khi đọc file, chúng ta không sử dụng tham số này. Vậy `arg2 = 0`
 - rax: Để gọi syscall open, `rax = 0x02`
 
@@ -45,10 +45,10 @@ syscall                         ; open("/tmp/flag", O_RDONLY, NULL)
 ## 2. read(fd, buf, 0x30) 
 
 Giả sử, chúng ta muốn đọc 0x30 bytes từ tệp dữ liệu. 3 tham số của syscall này đó là: 
-- arg0: `fd`. Khi mở xong file, giá trị của `fd` được lưu trong thanh ghi `rax`. Vì vậy `rdi` = `rax`.
+- arg0: `fd`. Khi mở xong file, giá trị của `fd` được lưu trong thanh ghi `rax`. Vì vậy `rdi = rax`.
 - arg1: `rsi` sẽ trỏ tới địa chỉ, nơi dữ liệu được đọc từ file lưu trữ. Do chúng ta sẽ đọc 0x30 bytes, `rsi = rsp - 0x30`.
 - arg2: `rdx` sẽ bằng 0x30, số bytes dữ liệu được đọc từ tệp. 
-- rax: Để gọi syscall này, `rax` = 0x00
+- rax: Để gọi syscall này, `rax = 0x00`
 
 Đoạn mã assembly thực hiện các công việc trên là
 ```asm
@@ -63,10 +63,10 @@ syscall         ; read(fd, buf, 0x30)
 ## 3. write(1, buf, 0x30)
 
 Khi gọi syscall write, `rsi` và `rdx` không thay đổi.
-- arg0: `fd`. Do đầu ra sẽ ở dạng xuất chuẩn, `rdi` = 0x1
+- arg0: `fd`. Do đầu ra sẽ ở dạng xuất chuẩn, `rdi = 0x1`
 - arg1: giữ nguyên như syscall read
 - arg2: giữ nguyên như syscall read
-- rax: Để gọi syscall, `rax` = 0x01 
+- rax: Để gọi syscall, `rax = 0x01` 
 
 Đoạn mã assembly thực hiên các công việc trên là
 ```asm
@@ -75,7 +75,7 @@ mov rax, 0x01   ; rax = 1 ; syscall_write
 syscall         ; write(fd, buf, 0x30)
 ```
 
-# 0x2 Framework Pwntools
+# 0x02 Framework Pwntools
 ![Alt text](image-1.png)
 
 Để thực hiện nhanh chóng các ý tưởng của chúng ta ở trên, framework pwntools có `shellcraft` để làm điều đó. 
@@ -86,7 +86,7 @@ shellcode += shellcraft.read('rax', 'rsp', 0x30)
 shellcode += shellcraft.write(0x01, 'rsp', 0x30)
 ```
 
-# 0x3 Shell_Basic
+# 0x03 Shell_Basic
 
 Với toàn bộ kiến thức ở trên, chúng ta có thể dễ dàng giải quyết bài toán này bằng 2 cách viết shellcode 
 
@@ -141,3 +141,6 @@ p.sendline(asm(shellcode2))
 
 p.interactive()
 ```
+
+# 0x04 Reference 
+- https://learn.dreamhack.io/50 
