@@ -144,3 +144,4 @@ p.interactive()
 
 # 0x04 Reference 
 - https://learn.dreamhack.io/50 
+- https://codebrowser.dev/glibc/glibc/bits/fcntl.h.html#24
