@@ -1,0 +1,3 @@
+# Ignore *.Zone:Identifier files when user copy a file
+# from the host to WSL VM.
+Zone:Identifier
