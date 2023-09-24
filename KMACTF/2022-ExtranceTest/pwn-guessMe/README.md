@@ -52,7 +52,7 @@ int main() {
 }
 ```
 
-```shell
+```sh
 gcc getrand.c -o getrand
 ```
 
@@ -66,7 +66,7 @@ line = int(line, 16) % 1337
 ## Phương pháp 2. Glibc
 
 Với phương pháp này, chúng ta cần phải patch file binary với libc cho trước. 
-```bash
+```sh
 $pwn-guessMe pwninit
 bin: ./guessMe
 libc: ./libc6_2.27-3ubuntu1.4_amd64.so
@@ -91,3 +91,5 @@ glibc.srand(glibc.time(0))
 
 val = glibc.rand() % 1337 
 ```
+# 0x02 Reference
+- https://github.com/nhtri2003gmail/CTFWriteup/blob/master/2022/KCSC-CTF-entrance-test/guessMe/README.md
