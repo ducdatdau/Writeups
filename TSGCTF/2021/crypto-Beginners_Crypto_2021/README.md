@@ -20,7 +20,9 @@ $$c_2 \equiv m^{e_2} \quad (\textrm{mod } n)$$
 Suy ra: 
 
 $$c_1^{k_1} \equiv m^{e_1k_1} \quad (\textrm{mod } n)$$
+
 $$c_2^{k_2} \equiv m^{e_2k_2} \quad (\textrm{mod } n)$$
+
 $$\to c_1^{k_1}c_2^{k_2} \equiv m^{e_1k_1 + e_2k_2} \quad (\textrm{mod } n)$$
 
 Nếu $gcd(e_1, e_2) = 1$, theo thuật toán Euclid mở rộng, tồn tại cặp số $(x, y)$ thỏa mãn: $e_1x + e_2y = 1$. Từ đây, chúng ta dễ dàng có được $k_1, k_2$. 
