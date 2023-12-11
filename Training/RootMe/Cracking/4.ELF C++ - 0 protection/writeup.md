@@ -18,7 +18,7 @@ Trong IDA, ta nên chú ý những dòng code cuối cùng.
 
 ![Alt text](./images/image-3.png)
 
-Còn trong gdb, khi mình chạy đến đây thấy trên stack có 2 chuỗi, đó là "123", đây là chuỗi mình nhập vào. Chuỗi còn lại là "Here_you_have_to_understand_a_little_C++_stuffs". Tới đây, mình đoán chuỗi đấy này là flag 
+Còn trong gdb, khi mình chạy đến đây thấy trên stack có 2 chuỗi, đó là "123", đây là chuỗi mình nhập vào. Chuỗi còn lại là "Here_you_have_to_understand_a_little_C++_stuffs". Tới đây, mình đoán chuỗi này là flag. 
 
 ![Alt text](./images/image-4.png)
 
@@ -30,3 +30,4 @@ Thực ra không có gì lạ cả. Mình chỉ biết thêm `sete al` là lật
 
 ![Alt text](./images/image-6.png)
 
+Flag **Here_you_have_to_understand_a_little_C++_stuffs**
