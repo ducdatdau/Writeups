@@ -10,7 +10,7 @@ và chơi thử game, ta biết được rằng, để lấy được flag sẽ 
 - Thay đổi độ cao mình có thể nhảy được hoặc disable việc rớt xuống đất
 - Dùng tool để decompile chương trình 
 
-Với 2 ý tưởng trên, do chưa có kinh nghiệm về dịch ngược game nên mình tạm gác lại. Tới đây, mình dùng công cụ gdsdecomp(https://github.com/bruvzg/gdsdecomp) để dịch ngược chương trình. Kết quả thu được khá khả quan.  
+Với 2 ý tưởng trên, do chưa có kinh nghiệm về dịch ngược game nên mình tạm gác lại. Tới đây, mình dùng công cụ [gdsdecomp](https://github.com/bruvzg/gdsdecomp) để dịch ngược chương trình. Kết quả thu được khá khả quan.  
 
 ![Alt text](./images/image-1.png)
 
