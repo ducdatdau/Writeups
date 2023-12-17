@@ -9,4 +9,4 @@ Từ đó mình có biết được file chứa flag nằm tại `C:\Users\Pwn2W
 
 ![Alt text](./images/image.png)
 
-Flag là **KCSC{~(^._.)=^._.^=(._.^)~}**
+Flag là **KCSC{~(^._.)=^._.^=(._.^)~}** (Markdown render text bị lỗi)
