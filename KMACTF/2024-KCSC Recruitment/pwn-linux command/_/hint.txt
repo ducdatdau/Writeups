@@ -1,0 +1,1 @@
+https://www.howtogeek.com/269509/how-to-run-two-or-more-terminal-commands-at-once-in-linux/
