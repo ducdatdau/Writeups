@@ -24,7 +24,7 @@ Do mình thấy chương trình có dòng code
 ```cpp
 SetConsoleTextAttribute(hConsoleOutput, 7u);
 ```
-nên mình đoán đây là hàm thay đổi màu chữ. Từ đó mình patch lại màu chữ từ 0x11 thành 0x7 cho giống các đoạn text có thể nhìn được ở trên
+nên mình nghĩ đây là hàm thay đổi màu chữ. Từ đó mình patch lại màu chữ từ 0x11 thành 0x7 cho giống các đoạn text có thể nhìn được ở trên
 
 ![Alt text](./images/image-1.png)
 
@@ -45,15 +45,15 @@ Ta sẽ đi phân tích hàm `main` với các hàm quan trọng như sau:
 
 ![Alt text](./images/image3-1.png)
 
-### 1. Phân tích sub_A3151E -> sub_A3151E -> sub_A388A0
+### 1. Phân tích sub_A3151E $\to$ sub_A3151E $\to$ sub_A388A0
 
-Hàm `sub_A316E5` nhằm tìm địa chỉ hàm `GetTempPathW` trong `kernel32.dll` rồi lưu vào `v4`. 
+Hàm `sub_A316E5` tìm địa chỉ của hàm `GetTempPathW` trong `kernel32.dll` rồi lưu vào `v4`. 
 
 Đoạn `v3 = v4(0x100, v5)` nhằm lưu đường dẫn `%temp%` vào biến `v5`, rồi trả về độ dài đường dẫn tại `v3`.
 
 ![Alt text](./images/image3.png)
 
-Hàm `GetTickCount64` trả về số ms từ khi hệ thống khởi động. Hiểu đơn giản, mỗi lần chạy file thực thi sẽ tạo ra một file khác nhau. 
+Hàm `GetTickCount64` trả về số ms từ khi hệ thống khởi động. Mục đích nhằm mỗi lần chạy file thực thi sẽ tạo ra một file khác nhau. 
 
 Tại `wsprintfW(&filepath_word_A473E0, "%", temp_path_v5, TickCount64);`, `filepath` được lưu tại `word_A473E0` với cấu trúc như sau 
 
