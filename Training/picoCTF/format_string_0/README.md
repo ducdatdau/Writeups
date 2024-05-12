@@ -1,0 +1,1 @@
+Bài này mình vẫn chưa hiểu tại sao mình lại có thể trigger được `sigsegv_handler()`
