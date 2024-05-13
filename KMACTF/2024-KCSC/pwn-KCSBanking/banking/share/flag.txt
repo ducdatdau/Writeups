@@ -1,0 +1,1 @@
+KCSC{fake_flag}
