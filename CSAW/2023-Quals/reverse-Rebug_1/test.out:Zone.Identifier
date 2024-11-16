@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://ctf.csaw.io/
-HostUrl=https://ctfddeploystack-ctfdassetsbucket3e4a664c-advpnvr9elmj.s3.amazonaws.com/edee5dee14fceffc9f43af617eb4e92c/test.out?response-content-disposition=attachment%3B%20filename%3Dtest.out&response-cache-control=max-age%3D3600&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3KDGGFXZ2LSW377Q%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230919T110000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=477baa3db55948e3f6a865dd0f5103159d1d9627f1816fa9a282df36b88d224e
