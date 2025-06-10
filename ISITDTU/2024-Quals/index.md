@@ -14,12 +14,6 @@ img {
 
 ## rev/animal
 
-{{< admonition note "Challenge Information" >}}
-* 31 solves / 100 pts / by kinjazz
-* **Given files:** [animal.7z](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/EVuJORIn52pClGE2rCr4DmUBCTw90S1TIg4_IAXLm0DzQg?e=qSdvbh)
-* **Description:** Find the hidden animal
-{{< /admonition >}}
-
 **Solution**
 
 Đề bài cho chúng ta một file PE64. Mở bằng IDA64, tổng quan chương trình sẽ như sau
@@ -200,12 +194,6 @@ Flag thu được là `ISITDTU{a_g0lden_cat_1n_y0ur_area!!}`
 
 ## rev/re01
 
-{{< admonition note "Challenge Information" >}}
-* 46 solves / 100 pts
-* **Given files:** [re01.zip](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/ESNNoaYOae9JvGrl9JN6OPMBtIU2akWobbFQ_uM4AorvGg?e=6Qz8eW)
-* **Description:** VC++ ;)
-{{< /admonition >}}
-
 **Solution**
 
 Đề bài cho chúng ta một file PE64, mở bằng IDA64, quan sát tổng thể ta có thể thấy chương trình dùng SHA1 để hash input và so sánh với chuỗi hash `eeeddf4ae0c3364f189a37f79c9d7223a1d60ac7`
@@ -259,12 +247,6 @@ print(flag)
 ```
 
 ## rev/re02
-
-{{< admonition note "Challenge Information" >}}
-* 29 solves / 100 pts
-* **Given files:** [re02.zip](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/EeUsnHq698FEtmb_PBqHVr0B8lbnkxPoWVzGVXMzEv56Tg?e=Yzivqm)
-* **Description:** NES, good luck ;)
-{{< /admonition >}}
 
 **Solution**
 
@@ -352,12 +334,6 @@ Kết quả thu được là `tuanlinhlinhtuan`,** bây giờ ta chỉ cần nh�
 <img src="12.png" width=500em/>
 
 ## rev/The Chamber of Flag
-
-{{< admonition note "Challenge Information" >}}
-* 28 solves / 100 pts / by ks75vl
-* **Given files:** [TheChamberOfFlag_11BA527D91D85F332DEBC3145E3E1C4A.zip](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/EfFkS6k8M_9JjPsrzbBDaYkBIuV4cVsOh92XlL1pCCfG6A?e=4BGYmb)
-* **Description:** Try to unlock the Chamber and get the Flag.
-{{< /admonition >}}
 
 **Solution**
 
@@ -558,12 +534,6 @@ Lúc này, mình tìm xung quanh các thanh ghi `rcx` để xem nó bị ảnh h
 
 ## pwn/shellcode 1
 
-{{< admonition note "Challenge Information" >}}
-* 68 solves / 100 pts / by code016hiro
-* **Given files:** [shellcode1.rar](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/ERrQb5blRN1IgofOJUmPwBwBROdWJxB03jdYp0yTbzcfGg?e=UTPFbg)
-* **Description:** `nc 152.69.210.130 3001`
-{{< /admonition >}}
-
 **Solution**
 
 Về tổng quan, chương trình đọc flag, lưu nó trên 1 vùng nhớ được `mmap` rồi xóa flag đó đi. Chương trình tiếp tục `mmap` một vùng nhớ mới cho shellcode với full quyền rwx và cho phép chúng ta chạy shellcode đó. 
@@ -659,12 +629,6 @@ Flag là `ISITDTU{061e8c26e3cf9bfad4e22879994048c8257b17d8}`
 
 ## pwn/shellcode 2
 
-{{< admonition note "Challenge Information" >}}
-* 61 solves / 100 pts / by code016hiro
-* **Given files:** [shellcode2.rar](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/EX0TUAE1NPhJndbYW1iHfpYBTKYyWKIMhYnFfxp1WSXHFA?e=sBRCLM)
-* **Description:** `nc 152.69.210.130 3002`
-{{< /admonition >}}
-
 **Solution**
 
 Decompile file đề bài cho bằng IDA64, ta có thể thấy chương trình `mmap` cho vùng nhớ ở địa chỉ 0xAABBCC00 kích thước 0x1000 byte với full quyền rwx. 
@@ -751,12 +715,6 @@ p.interactive()
 Flag là `ISITDTU{95acf3a6b3e1afc243fbad70fbd60a6be00541c62c6d651d1c10179b41113bda}`
 
 ## pwn/Game of Luck
-
-{{< admonition note "Challenge Information" >}}
-* 43 solves / 100 pts
-* **Given files:** [chal](https://wru-my.sharepoint.com/:u:/g/personal/2251272678_e_tlu_edu_vn/ERNFcvJ6e1hJpa1dCZ_7Vi0BuGrWTSPjcJKarUz4mA63_Q?e=xatAA3)
-* **Description:** `nc 152.69.210.130 2004`
-{{< /admonition >}}
 
 **Solution** 
 
